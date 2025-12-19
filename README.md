@@ -18,65 +18,65 @@ The API allows users to send any text and get a classification into one of the f
 ## Features
 ------------------------------------------------------------------------------------------------------
 
--Fast, lightweight model using DistilBERT.
--Easy-to-use API via /predict endpoint.
--Local evaluation script to measure accuracy on the test set.
--Error handling for empty or invalid inputs.
--Supports CPU and GPU inference.
+1) Fast, lightweight model using DistilBERT.
+2) Easy-to-use API via /predict endpoint.
+3) Local evaluation script to measure accuracy on the test set.
+4) Error handling for empty or invalid inputs.
+5) Supports CPU and GPU inference.
 
 ------------------------------------------------------------------------------------------------------
 ## Files in the Repository
 ------------------------------------------------------------------------------------------------------
 
-train.py ------------------ Fine-tune the DistilBERT model on AG News.
-evaluate.py ------------------ Evaluate the model accuracy on the test set.
-app.py ------------------ FastAPI server for serving predictions.
-model/ ------------------ Saved pre-trained model and tokenizer files.
-requirements.txt ------------------ Python dependencies.
-README.md ------------------ Project overview and instructions.
+1) train.py ------------------ Fine-tune the DistilBERT model on AG News.
+2) evaluate.py ------------------ Evaluate the model accuracy on the test set.
+3) app.py ------------------ FastAPI server for serving predictions.
+4) model/ ------------------ Saved pre-trained model and tokenizer files.
+5) requirements.txt ------------------ Python dependencies.
+6) README.md ------------------ Project overview and instructions.
 
 ------------------------------------------------------------------------------------------------------
 ## Prerequisites
 ------------------------------------------------------------------------------------------------------
 
-Python 3.11
-pip
-Optional: GPU for faster inference
+1) Python 3.11
+2) pip
+3) Optional: GPU for faster inference
 
 ------------------------------------------------------------------------------------------------------
 ## Setup Instructions
 ------------------------------------------------------------------------------------------------------
 
-1. Clone the repository
+Clone the repository
 
-git clone <your-repo-url>
-cd <repo-folder>
+1) git clone <your-repo-url>
+2) cd <repo-folder>
 
-2. Create a virtual environment
+Create a virtual environment
 
-python -m venv .venv
+1) "python -m venv .venv"
 
-3. Activate the virtual environment
+Activate the virtual environment
    
-   Windows:
-   ".venv\Scripts\activate"
+   1) Windows:
+   2) ".venv\Scripts\activate"
 
-    macOS/Linux:
-    "source .venv/bin/activate"
+    1) macOS/Linux:
+    2) "source .venv/bin/activate"
 
-4. Install dependencies
+Install dependencies
 
-"pip install -r requirements.txt"
+1) "pip install -r requirements.txt"
 
-5. Ensure the model/ folder exists
+Ensure the model/ folder exists
 
 The API requires a trained model which isn't included. Run:
 
-"python train.py"
+1) "python train.py"
 
 Then evaluate the model but running: 
 
-"python evaluate.py"
+2) "python evaluate.py"
 
 This is to test the model on the AG News test set.
 This ensures the trained model performs as expected.
@@ -89,11 +89,11 @@ Output will display the test accuracy. Example:
 ## Running the API
 ------------------------------------------------------------------------------------------------------
 
-1. Start the FastAPI server:
+Start the FastAPI server:
 
-uvicorn app:app --reload
+1) "uvicorn app:app --reload"
 
-2. Open "http://127.0.0.1:8000/docs" to interact with the API using the Swagger UI.
+Open "http://127.0.0.1:8000/docs" to interact with the API using the Swagger UI.
 
 Go to the POST /predict endpoint.
 
