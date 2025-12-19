@@ -7,10 +7,10 @@ This project is a A Python-based API for classifying news articles into one of f
 
 This project demonstrates:
 
-.Fine-tuning a pre-trained DistilBERT model for text classification on the AG News dataset.
-.Building a FastAPI backend for serving the model.
-.Creating a REST API endpoint /predict that returns predicted class and confidence for any input text.
-.Packaging the model and API for easy local use.
+1) Fine-tuning a pre-trained DistilBERT model for text classification on the AG News dataset.
+2) Building a FastAPI backend for serving the model.
+3) Creating a REST API endpoint /predict that returns predicted class and confidence for any input text.
+4) Packaging the model and API for easy local use.
 
 The API allows users to send any text and get a classification into one of the four categories.
 
